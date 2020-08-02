@@ -1,0 +1,3 @@
+# User inputer
+# “What is your favorite flightless bird?” and then stores their answer in the variable favorite_flightless_bird.
+favorite_flightless_bird = input("What is your favorite flightless bird?")
