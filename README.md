@@ -1,5 +1,5 @@
 # python_practice
-Practicing Python 3 by following codeacademy's resources. 
+Practicing Python 3 by following codeacademy's course. 
 
 ## Tools
 * Install Anaconda (requires python 3)
