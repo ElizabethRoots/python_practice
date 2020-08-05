@@ -32,3 +32,22 @@ print(over_budget(100, 20, 30, 10, 40))
 # should print False
 print(over_budget(80, 20, 30, 10, 30))
 # should print True
+
+# ----------------------------------
+# Twice As Large
+# Write your twice_as_large function here:
+
+
+def twice_as_large(num1, num2):
+    if num1 > (num2 * 2):
+        return True
+    else:
+        return False
+
+
+# Uncomment these function calls to test your twice_as_large function:
+print(twice_as_large(10, 5))
+# should print False
+print(twice_as_large(11, 5))
+# should print True
+print(twice_as_large(21, 10))
