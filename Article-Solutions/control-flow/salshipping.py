@@ -23,9 +23,9 @@ def drone_shipping(weight):
   print(drone_shipping(1.5)) 
 
 def user_statement(weight): 
-  if (cost_of_ground < drone_shipping):
-    print('The cheapest shipping is ' + cost_of_ground + '.')
-  elif (cost_of_ground > drone_shipping):
-    print('The cheapest shipping is ' + drone_shipping + '.')
+  if (cost_of_ground(weight) < drone_shipping(weight)):
+    print('The cheapest shipping is ' + cost_of_ground(weight) + '.')
+  elif (cost_of_ground(weight) > drone_shipping(weight)):
+    print('The cheapest shipping is ' + drone_shipping(weight) + '.')
   else:
     print('Shipping ground and drone is the same cost.') 
