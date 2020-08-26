@@ -1,30 +1,44 @@
 import random
 
-money = 100
 num = random.randint(1, 10)
 
 
-def heads_tails(coin_guess, bet):
-    heads = 1
-    tails = -1
+def heads_tails():
+    heads = 'heads'
+    tails = 'tails'
+    money = 100
+    total = 0
     coin_guess = input("Choose a side: ")
-    bet = input("How much to bet?")
-    print(coin_guess, bet)
+    bet = int(input("How much to bet? "))
+    print(coin_guess)
+    print(int(bet))
 
-    result = 0
     coin_flip = random.randint(1, 2)
+    print(coin_flip)
 
     if coin_flip == 1:
         if coin_guess == heads:
-            result = 1
-
+            total = (money + bet)
+            print("You guessed heads and the coin was " +
+                  heads + ". You win!")
+            print(total)
         else:
-            result = -1
+            total = (money - bet)
+            print("You guessed heads and the coin was " +
+                  tails + ". You lost.")
+            print(total)
     if coin_flip == 2:
         if coin_guess == tails:
-            result = -1
+            total = (money + bet)
+            print("You guessed tails and the coin was " +
+                  tails + ". You win!")
+            print(total)
+        else:
+            total = (money - bet)
+            print("You guessed tails and the coin was " +
+                  heads + ". You lost!")
+            print(total)
 
-    if money <= 0:
-        print('Sorry! Not enough money to bet.')
 
 # Call your game of chance functions here
+heads_tails()
