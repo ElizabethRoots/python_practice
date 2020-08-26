@@ -16,28 +16,18 @@ def heads_tails():
     coin_flip = random.randint(1, 2)
     print(coin_flip)
 
-    if coin_flip == 1:
-        if coin_guess == heads:
-            total = (money + bet)
-            print("You guessed heads and the coin was " +
-                  heads + ". You win!")
-            print(total)
-        else:
-            total = (money - bet)
-            print("You guessed heads and the coin was " +
-                  tails + ". You lost.")
-            print(total)
-    if coin_flip == 2:
-        if coin_guess == tails:
-            total = (money + bet)
-            print("You guessed tails and the coin was " +
-                  tails + ". You win!")
-            print(total)
-        else:
-            total = (money - bet)
-            print("You guessed tails and the coin was " +
-                  heads + ". You lost!")
-            print(total)
+    if (coin_guess == heads) & (coin_flip == 1):
+        total = (money + bet)
+        print("You guessed heads and the coin was " + heads + ". You win!")
+        print(total)
+    elif (coin_guess == heads) & (coin_flip == 2):
+        total = (money - bet)
+        print("You guessed wrong.")
+        print(total)
+    elif (coin_flip == 2) & (coin_guess == tails):
+        total = (money + bet)
+        print("You guessed tails and the coin was " + tails + ". You win!")
+        print(total)
 
 
 # Call your game of chance functions here
