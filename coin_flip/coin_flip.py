@@ -1,10 +1,12 @@
 import random
 
-num = random.randint(1, 10)
+# Define variables
 heads = 'heads'
 tails = 'tails'
 money = 100
 total = 0
+
+# Determine the going guess, bet, and flip the coin.
 
 
 def heads_tails():
@@ -29,5 +31,5 @@ def heads_tails():
         print(total)
 
 
-# Call your game of chance functions here
+# Call the coin game function
 heads_tails()
