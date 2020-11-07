@@ -108,3 +108,18 @@ print("--EXPLORING TUPLE--")
 
 # create a tuple
 fruitTuple = ("apple", "banana", "cherry")
+print(fruitTuple)
+
+# print second item in a tuple
+print(fruitTuple[1])
+
+# convert tuple to list
+fruitTupleList = list(fruitTuple)
+print(fruitTupleList)
+
+fruitTupleList[1] = "kiwi"  # replaces banana with kiwi
+
+fruitTuple = tuple(fruitTupleList)
+print(fruitTuple)
+print(type(fruitTuple))
+print(len(fruitTuple))
