@@ -1,4 +1,5 @@
 # Built in methods for lists, tuples, and strings
+# %run methods.py
 
 print("--LISTS--")
 # create and append to a list

@@ -1,4 +1,5 @@
 # Data containers and how to access them.
+# # %run dataContainers.py
 
 # create a list
 print("--EXPLORING LISTS--")
