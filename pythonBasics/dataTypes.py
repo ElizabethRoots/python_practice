@@ -1,4 +1,5 @@
 # Data types
+# # %run dataTypes.py
 
 # str
 exampleString = "This is a string."
