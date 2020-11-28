@@ -59,11 +59,6 @@ class ShiftCipher:
                 result = result + letter
         return result
 
-        tmsg = ''
-        for c in message:
-            tmsg = tmsg + cipher.get(c, c)
-        return tmsg
-
     def encrypt(self, message):
         """
         Transforms a message using the cipher, by calling self.transform_message
