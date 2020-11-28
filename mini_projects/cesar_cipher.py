@@ -43,8 +43,8 @@ class ShiftCipher:
         self.letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
         self.cipher = {self.letters[i]: self.letters[(
             i + self.shift) % len(self.letters)] for i in range(len(self.letters))}
-        self.decoder = {self.letters[i]: self.letters[(
-            i + (self.shift - self.shift)) % len(self.letters)] for i in range(len(self.letters))}
+        self.decoder = {self.letters[i]: self.letters[(i) % len(
+            self.letters)] for i in range(len(self.letters))}
 
     def transform_message(self, message, code_cipher):
         """
