@@ -42,9 +42,9 @@ class ShiftCipher:
         self.shift = shift
         self.letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
         self.cipher = {self.letters[i]: self.letters[(
-            i-shift) % len(self.letters)] for i in range(len(self.letters))}
+            i + self.shift) % len(self.letters)] for i in range(len(self.letters))}
         self.decoder = {self.letters[i]: self.letters[(
-            i-shift) % len(self.letters)] for i in range(len(self.letters))}
+            i + (self.shift - self.shift)) % len(self.letters)] for i in range(len(self.letters))}
 
     def transform_message(self, message, code_cipher):
         """
@@ -54,10 +54,15 @@ class ShiftCipher:
         result = ''
         for letter in message:
             if letter in code_cipher:
-                result = result + code_cipher[letter]
+                result = result + code_cipher.get(letter, letter)
             else:
                 result = result + letter
         return result
+
+        tmsg = ''
+        for c in message:
+            tmsg = tmsg + cipher.get(c, c)
+        return tmsg
 
     def encrypt(self, message):
         """
@@ -72,28 +77,37 @@ class ShiftCipher:
         return self.transform_message(test, self.decoder)
 
 
+# sample sentence
 test = "I come to bury Caesar, not to praise him."
 
+# code a message by no shift spaces
 print("--c0--")
 c0 = ShiftCipher(0)
 c0_coded_message = c0.encrypt(test)
 print("Coded c0", c0_coded_message)
-c0_decoded_message = c0.decode(test)
+c0_decoded_message = c0.decode(c0_coded_message)
 print("Decoded c0", c0_decoded_message)
 print(" ")
 
+# code a message by 3 shift spaces
 print("--m3--")
 m3 = ShiftCipher(-3)
 m3_coded_message = m3.encrypt(test)
 print("Coded m3", m3_coded_message)
+m3_decoded_message = m3.decode(m3_coded_message)
+print("Decoded m3", m3_decoded_message)
 print(" ")
 
+# code a message by 13 shift spaces
 print("--p13--")
 p13 = ShiftCipher(13)
 p13_coded_message = p13.encrypt(test)
 print("Coded p13", p13_coded_message)
+p13_decoded_message = p13.decode(p13_coded_message)
+print("Decoded p13", p13_decoded_message)
 print(" ")
 
+# test that both encrypt and decode functions work
 print("--sanity test--")
 if test == p13.decode(p13.encrypt(test)):
     print("decoding worked")
