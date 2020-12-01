@@ -43,21 +43,18 @@ class ShiftCipher:
         self.letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
         self.cipher = {self.letters[i]: self.letters[(
             i + self.shift) % len(self.letters)] for i in range(len(self.letters))}
-        self.decoder = {self.letters[i]: self.letters[(i) % len(
-            self.letters)] for i in range(len(self.letters))}
+        self.decoder = {self.letters[i]: self.letters[(
+            i - self.shift) % len(self.letters)] for i in range(len(self.letters))}
 
-    def transform_message(self, message, code_cipher):
+    def transform_message(self, message, cipher):
         """
         Transforms a message using the specified cipher.  Is not called by users directly,
         and can be called with either the cipher (to encrypt) or the decoder (to decode).
         """
-        result = ''
-        for letter in message:
-            if letter in code_cipher:
-                result = result + code_cipher.get(letter, letter)
-            else:
-                result = result + letter
-        return result
+        tmsg = ''
+        for c in message:
+            tmsg = tmsg + cipher.get(c, c)
+        return tmsg
 
     def encrypt(self, message):
         """
@@ -69,7 +66,7 @@ class ShiftCipher:
         """
         Transforms a message using the decoder, by calling self.transform_message
         """
-        return self.transform_message(test, self.decoder)
+        return self.transform_message(message, self.decoder)
 
 
 # sample sentence
