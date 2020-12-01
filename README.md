@@ -14,7 +14,7 @@ Collection of python mini projects, code samples, and solutions practicing pytho
 
 ## Content
 
-* codecademy is a collection of python solution code from the codecademy Python 3 learning track. 
+* codecademy is a collection of python solution code from the codecademy Python 3 and Analyze Data with Python learning tracks.
 * python_basics contains sample practice python code.
 * mini_projects is a collection of mini_projects (pretty obvious right?)
 
