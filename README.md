@@ -16,6 +16,18 @@ Collection of python mini projects, code samples, and solutions practicing pytho
 
 * codecademy is a collection of python solution code from the codecademy Python 3 and Analyze Data with Python learning tracks.
 * python_basics contains sample practice python code.
-* mini_projects is a collection of mini_projects (pretty obvious right?)
+* mini_projects is a collection of mini projects (pretty obvious right?)
+* games is a collection of games coded in python 
+
+---
+
+## Run Python 'games'
+
+To run games, install pygame <br/>
+<code>pip install pygame</code>
+
+Run the following command to run aliens (comes with pygame): <br/>
+<code>python3 -m pygame.examples.aliens</code>
+
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
