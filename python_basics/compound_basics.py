@@ -12,12 +12,15 @@ print("Compound")
 
 
 def compound(balance, rate, num_periods):
+    """
+    Compound 
+    """
     print(0, round(balance, 2))
     for n in range(1, num_periods):
         balance = balance * (rate + 1)
         current_balance = balance
         print(n, round(current_balance, 2))
-    return n, round(current_balance, 2)
+    return (n, round(current_balance, 2))
 
 
 print(compound(100, 0.03, 11))
@@ -27,6 +30,9 @@ print("Compound by period")
 
 
 def compound_by_period(balance, rate, num_periods):
+    """
+    Compound by period
+    """
     yr_balance = []
     print(0, round(balance, 2))
     for n in range(1, num_periods):
