@@ -5,7 +5,7 @@ import pandas as pd
 import csv
 
 
-df = pd.read_csv(r'saving_christmas_expense.csv', sep=',')
+df = pd.read_csv(r'day1_data.csv', sep=',')
 print(df)
 
 a_expense = df.values.tolist()
