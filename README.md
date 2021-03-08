@@ -1,6 +1,6 @@
 # python_practice
 
-Collection of python mini projects, code samples, and solutions practicing python.  
+Collection of python mini projects, code samples, and solutions practicing python.   
 
 ## Tools
 
