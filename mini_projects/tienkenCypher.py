@@ -59,4 +59,3 @@ print(test_word)
 pickedNumber = input("Enter a number: ")
 insertWord = findWord(catalog, int(pickedNumber))
 print(insertWord)
-# problem = function not accepting number that was picked
