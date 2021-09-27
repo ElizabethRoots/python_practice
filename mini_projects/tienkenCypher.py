@@ -40,20 +40,15 @@ Enter a number and a word that equals that total is listed.
 '''
 
 catalog = {"cat": 12, "dog": 13, "fire": 17, "apple": 17, "music": 27}
-pickedNumber = input("Enter a number: ")
-
-number = pickedNumber
 
 
 def findWord(listOfWords, number):
     #print("You entered: ", number)
-    listOfKeys = list()
+    listOfKeys = []
     listOfItems = listOfWords.items()
     for item in listOfItems:
         if item[1] == number:
             listOfKeys.append(item[0])
-        else:
-            "Your number didn/'t match a word."
     return listOfKeys
 
 
@@ -61,5 +56,7 @@ def findWord(listOfWords, number):
 test_word = findWord(catalog, 17)
 print(test_word)
 
-insertWord = findWord(catalog, pickedNumber)
+pickedNumber = input("Enter a number: ")
+insertWord = findWord(catalog, int(pickedNumber))
 print(insertWord)
+# problem = function not accepting number that was picked
